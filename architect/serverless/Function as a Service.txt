@@ -1,4 +1,0 @@
-Function as a Service 函数即服务
-FaaS指无须自行管理服务器系统或自己的服务器应用程序，即可直接运行后端代码
-FaaS产品不要求必须使用特定框架或库进行开发
-FaaS函数就是常规的应用程序(在语言和环境方面), 例如AWS Lambda函数可以通过JS、Python以及JVM语言等实现

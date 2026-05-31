@@ -1,5 +1,0 @@
-Sass应用即服务:
-Sass层作为应用的展示层，将软件Software Application作为服务提供给用户
-Sass层通常包含三个层面的服务: Web Mobile APP + 后台APP + 运维监控APP
-
-构建SaaS应用十二条方法论: https://12factor.net/zh_cn/
