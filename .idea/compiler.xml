@@ -8,9 +8,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="euroka-client-user" />
         <module name="openfeign-call" />
+        <module name="discovery" />
+        <module name="common-framework" />
         <module name="euroka-client-order" />
         <module name="route-gateway" />
         <module name="eureka-server" />
+        <module name="resource-manager" />
+        <module name="messaging" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
