@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$APPLICATION_HOME_DIR$/bin/src/main/java" charset="UTF-8" />
+    <file url="file://$APPLICATION_HOME_DIR$/bin/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microservice-discovery/netflix-eureka/eureka-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microservice-discovery/netflix-eureka/eureka-server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microservice-discovery/netflix-eureka/euroka-client-order/src/main/java" charset="UTF-8" />
@@ -23,8 +25,15 @@
     <file url="file://$PROJECT_DIR$/microservice-register-discovery/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mircoservice-openfeign/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mircoservice-openfeign/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mircoservice-project/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mircoservice-project/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-cloud-config-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-cloud-config-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-frameworks/openfeign-call/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-frameworks/openfeign-call/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-frameworks/route-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-frameworks/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-frameworks/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-cloud-gateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-cloud-gateway/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-cloud-projects/src/main/java" charset="UTF-8" />

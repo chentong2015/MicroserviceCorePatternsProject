@@ -17,6 +17,5 @@ eureka:
   client:
     registerWithEureka: false
     fetchRegistry: false
-    # Service Url is for registry of clients
-    serviceUrl:
+    serviceUrl: # Service Url is for registry of clients
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/

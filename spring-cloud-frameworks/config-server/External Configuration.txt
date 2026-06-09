@@ -1,0 +1,15 @@
+TODO. Spring Cloud Config Server
+支持通过外部的配置文件来配置当前的项目，支持定制化的配置
+Spring Cloud Config Server provides an HTTP resource-based API for external configuration
+https://github.com/spring-cloud-samples/config-repo/blob/main/application.yml
+
+@SpringBootApplication
+@EnableConfigServer
+public class ConfigServerApplication {}
+
+<!-- 存在潜在安全问题 -->
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-config-server</artifactId>
+    <version>4.0.4</version>
+</dependency>

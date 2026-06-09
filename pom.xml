@@ -11,8 +11,8 @@
 
     <modules>
         <module>microservice-discovery</module>
-        <module>microservice-openfeign</module>
-        <module>spring-cloud-config-server</module>
+        <module>mircoservice-project</module>
+        <module>spring-cloud-frameworks</module>
     </modules>
 
     <properties>
