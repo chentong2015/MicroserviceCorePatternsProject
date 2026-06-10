@@ -1,7 +1,7 @@
 package org.example;
 
-import org.example.restclient.RestClientWrapper;
-import org.example.restclient.RestRequest;
+import restclient.RestClientWrapper;
+import restclient.RestRequest;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
@@ -9,8 +9,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
-
-import java.util.Optional;
 
 @RestController
 public class ResourceController {
@@ -20,7 +18,7 @@ public class ResourceController {
 
     private final RestClientWrapper restClientWrapper;
 
-    // TODO. 自动注入的RestTemplate在发送请求时自动负载均衡
+    // TODO. 包装注入的RestTemplate, 在发送请求时自动负载均衡
     public ResourceController(RestTemplate restTemplate) {
           this.restClientWrapper = new RestClientWrapper(microserviceName, restTemplate);
     }
@@ -29,8 +27,9 @@ public class ResourceController {
     public String testLoadBalanced() {
         RestRequest restRequest = new RestRequest(requestUrl, null, HttpMethod.GET);
         final ResponseEntity<String> exchange = this.restClientWrapper.query(restRequest, new ParameterizedTypeReference<>() {});
-
-        Optional<String> result = exchange.getStatusCode() == HttpStatus.OK ? Optional.ofNullable(exchange.getBody()) : Optional.empty();
+        if (exchange.getStatusCode() == HttpStatus.OK) {
+            System.out.println(exchange.getBody());
+        }
         return "OK";
     }
 }

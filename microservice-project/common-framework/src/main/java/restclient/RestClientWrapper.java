@@ -1,6 +1,6 @@
-package org.example.restclient;
+package restclient;
 
-import org.example.resource.MultipartFileInputStreamResource;
+import restclient.resource.MultipartFileInputStreamResource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.ParameterizedTypeReference;

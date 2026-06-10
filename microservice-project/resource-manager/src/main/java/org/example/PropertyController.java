@@ -1,6 +1,6 @@
 package org.example;
 
-import org.example.properties.SpringApplicationProperties;
+import properties.SpringApplicationProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

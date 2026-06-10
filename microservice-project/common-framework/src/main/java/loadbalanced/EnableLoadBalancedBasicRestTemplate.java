@@ -1,4 +1,4 @@
-package org.example.loadbalanced;
+package loadbalanced;
 
 import org.springframework.context.annotation.Import;
 

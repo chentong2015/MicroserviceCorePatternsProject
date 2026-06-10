@@ -1,4 +1,4 @@
-package org.example.resource;
+package restclient.resource;
 
 import org.springframework.core.io.InputStreamResource;
 

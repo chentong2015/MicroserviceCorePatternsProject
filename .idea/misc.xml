@@ -25,6 +25,7 @@
         <option value="$PROJECT_DIR$/microservice-discovery/eureka-client-order/pom.xml" />
         <option value="$PROJECT_DIR$/microservice-discovery/eureka-client-user/pom.xml" />
         <option value="$PROJECT_DIR$/microservice-discovery/eureka-server/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-framework/route-gateway/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
