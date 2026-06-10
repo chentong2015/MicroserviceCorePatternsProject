@@ -1,4 +1,4 @@
-package org.example;
+package workmanager;
 
 import restclient.RestClientWrapper;
 import restclient.RestRequest;

@@ -1,4 +1,4 @@
-package org.example;
+package workmanager;
 
 import loadbalanced.EnableLoadBalancedBasicRestTemplate;
 import org.springframework.boot.SpringApplication;
