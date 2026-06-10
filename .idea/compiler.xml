@@ -6,14 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="euroka-client-user" />
         <module name="openfeign-call" />
         <module name="discovery" />
+        <module name="eureka-client-user" />
         <module name="common-framework" />
-        <module name="euroka-client-order" />
+        <module name="eureka-client-order" />
         <module name="route-gateway" />
-        <module name="eureka-server" />
         <module name="resource-manager" />
+        <module name="eureka-server" />
         <module name="messaging" />
       </profile>
     </annotationProcessing>
@@ -23,6 +23,7 @@
       <module name="microservice-nacos" target="11" />
       <module name="microservice-register-discovery" target="17" />
       <module name="mircoservice-openfeign" target="11" />
+      <module name="netflix-eureka" target="17" />
       <module name="spring-cloud-config-server" target="15" />
       <module name="spring-cloud-eureka" target="17" />
       <module name="spring-cloud-projects" target="17" />
@@ -33,9 +34,9 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="eureka-client" options="-parameters" />
+      <module name="eureka-client-order" options="-parameters" />
+      <module name="eureka-client-user" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
-      <module name="euroka-client-order" options="-parameters" />
-      <module name="euroka-client-user" options="-parameters" />
       <module name="route-gateway" options="-parameters" />
       <module name="zuul-proxy" options="-parameters" />
     </option>

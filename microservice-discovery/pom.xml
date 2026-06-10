@@ -11,9 +11,6 @@
 
     <artifactId>microservice-discovery</artifactId>
     <packaging>pom</packaging>
-    <modules>
-        <module>netflix-eureka</module>
-    </modules>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>

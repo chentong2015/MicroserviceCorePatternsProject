@@ -12,7 +12,7 @@
     <modules>
         <module>microservice-discovery</module>
         <module>microservice-project</module>
-        <module>spring-cloud-frameworks</module>
+        <module>spring-cloud-framework</module>
         <module>microservice-project/messaging</module>
     </modules>
 
