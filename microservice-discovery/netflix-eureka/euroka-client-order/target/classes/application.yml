@@ -1,0 +1,29 @@
+server:
+  port: 9080
+
+spring:
+  application:
+    name: order-service
+
+# netflix-eureka-client on the classpath, app automatically registers with the Eureka Server.
+# Below configuration is required to locate the Eureka server,
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+  instance:
+    prefer-ip-address: true
+    # heartbeat duration of 30 seconds by default
+    # leaseRenewalIntervalInSeconds: 30s
+
+# Configure https connection with tls
+# tls:
+#   enabled: true
+#   key-store: <path-of-key-store>
+#   key-store-type: PKCS12
+#   key-store-password: <key-store-password>
+#   key-password: <key-password>
+#   trust-store: <path-of-trust-store>
+#   trust-store-type: PKCS12
+#   trust-store-password: <trust-store-password>

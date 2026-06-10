@@ -1,0 +1,21 @@
+# Define eureka server port
+server:
+  port: 8761
+
+spring:
+  application:
+    name: eureka-server
+  # cloud:
+  #   config:
+  #     uri: ${CONFIG_SERVER_URL:http://localhost:8888}
+
+# Every Eureka server is also a Eureka client and requires (at least one) service URL to locate a peer.
+# Eureka can be made even more resilient and available by running multiple instances
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl: # Service Url is for registry of clients
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
