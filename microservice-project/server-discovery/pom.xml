@@ -14,11 +14,11 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <!-- TODO. 注意Spring Boot和Spring Cloud版本兼容性 -->
+    <!-- TODO. Spring Boot & Spring Cloud 版本必须兼容性 -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.5.3</version>
+        <version>4.0.4</version>
         <relativePath/>
     </parent>
 
@@ -27,7 +27,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>2025.0.0</version>
+                <version>2025.1.1</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

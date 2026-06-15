@@ -24,12 +24,12 @@
     <file url="file://$PROJECT_DIR$/microservice-discovery/zuul-eureka/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microservice-discovery/zuul-eureka/zuul-proxy/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microservice-discovery/zuul-eureka/zuul-proxy/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/microservice-project/client-manager/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/microservice-project/client-manager/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microservice-project/client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microservice-project/client/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microservice-project/common-framework/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microservice-project/common-framework/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/microservice-project/platform-messaging/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/microservice-project/platform-messaging/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microservice-project/messaging/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microservice-project/messaging/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microservice-project/server-discovery/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microservice-project/server-discovery/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microservice-project/src/main/java" charset="UTF-8" />

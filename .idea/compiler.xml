@@ -6,14 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="platform-messaging" />
         <module name="openfeign-call" />
         <module name="eureka-client-user" />
+        <module name="client" />
         <module name="eureka-client-order" />
-        <module name="client-manager" />
         <module name="route-gateway" />
         <module name="server-discovery" />
         <module name="eureka-server" />
+        <module name="messaging" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -33,12 +33,12 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="client-manager" options="-parameters" />
+      <module name="client" options="-parameters" />
       <module name="eureka-client" options="-parameters" />
       <module name="eureka-client-order" options="-parameters" />
       <module name="eureka-client-user" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
-      <module name="platform-messaging" options="-parameters" />
+      <module name="messaging" options="-parameters" />
       <module name="route-gateway" options="-parameters" />
       <module name="server-discovery" options="-parameters" />
       <module name="zuul-proxy" options="-parameters" />

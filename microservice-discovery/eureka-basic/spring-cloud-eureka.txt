@@ -1,7 +1,7 @@
 TODO. Spring Cloud Eureka
 The Service Discovery Server and Client.
 - Provides meta-data such as host, port, health indicator URL, home page, and other details.
-- Eureka receives heartbeat messages from each instance belonging to a service.
+- Eureka receives heartbeat messages from each instance belonging to a discovery.
   If the heartbeat fails, the instance is normally removed from the registry.
 
 部署多个Eureka实例，提供高可用性

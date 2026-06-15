@@ -36,15 +36,15 @@ public class RestClientWrapper {
     private static Pattern pattern = Pattern.compile("No instances available for (.*)");
 
     public RestClientWrapper(String serviceName, RestTemplate restTemplate) {
-        this(serviceName, restTemplate, serviceName, true);
+        this(serviceName, restTemplate, null, true);
     }
 
     public RestClientWrapper(String serviceName, RestTemplate restTemplate, boolean sslEnabled) {
-        this(serviceName, restTemplate, serviceName, sslEnabled);
+        this(serviceName, restTemplate, null, sslEnabled);
     }
 
     public RestClientWrapper(String serviceName, RestTemplate restTemplate, String serviceBasePath) {
-        this(serviceName, restTemplate, serviceName, true);
+        this(serviceName, restTemplate, serviceBasePath, true);
     }
 
     public RestClientWrapper(String serviceName, RestTemplate restTemplate, String serviceBasePath, boolean sslEnabled) {

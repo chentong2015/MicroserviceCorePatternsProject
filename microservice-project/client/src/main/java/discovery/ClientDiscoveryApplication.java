@@ -1,4 +1,4 @@
-package workmanager;
+package discovery;
 
 import loadbalanced.EnableLoadBalancedBasicRestTemplate;
 import org.springframework.boot.SpringApplication;
@@ -9,9 +9,9 @@ import properties.SpringApplicationProperties;
 @SpringBootApplication
 @EnableLoadBalancedBasicRestTemplate
 @EnableConfigurationProperties({SpringApplicationProperties.class})
-public class ResourceManagerApplication {
+public class ClientDiscoveryApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ResourceManagerApplication.class, args);
+        SpringApplication.run(ClientDiscoveryApplication.class, args);
     }
 }
