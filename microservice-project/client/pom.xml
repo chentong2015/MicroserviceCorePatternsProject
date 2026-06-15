@@ -39,7 +39,8 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!-- 必须添加客户端才能注册到Eureka Server, 直接或间接的方式注入依赖  -->
+        <!-- TODO: 直接或间接的方式注入依赖
+        必须添加客户端才能注册到Eureka Server -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
