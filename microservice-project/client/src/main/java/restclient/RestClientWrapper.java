@@ -1,20 +1,13 @@
 package restclient;
 
-import restclient.resource.MultipartFileInputStreamResource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.ParameterizedTypeReference;
-import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.*;
-import org.springframework.util.LinkedMultiValueMap;
-import org.springframework.util.MultiValueMap;
 import org.springframework.util.StringUtils;
 import org.springframework.web.client.HttpStatusCodeException;
 import org.springframework.web.client.ResourceAccessException;
 import org.springframework.web.client.RestTemplate;
-
-import java.io.InputStream;
-import java.util.Objects;
 import java.util.function.Function;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -94,24 +87,6 @@ public class RestClientWrapper {
                 (httpHeaders) -> request.getRequestBody() != null ? new HttpEntity(request.getRequestBody(), headers) : new HttpEntity(headers));
     }
 
-    public RestResponse<Object> multipartQuery(RestRequest request, String fileParamName, String fileName, InputStream fileResource, MultiValueMap<String, Object> extraParams) {
-        HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.MULTIPART_FORM_DATA);
-        return this.query(request, request.getRetryCount(), headers, (httpHeaders) -> {
-            MultiValueMap<String, Object> params = new LinkedMultiValueMap();
-            InputStreamResource is = new MultipartFileInputStreamResource(fileResource, fileName);
-            if (request.getRequestBody() != null) {
-                params.set(fileParamName == null ? "file" : fileParamName, is);
-                if (extraParams != null) {
-                    Objects.requireNonNull(params);
-                    extraParams.forEach(params::putIfAbsent);
-                }
-            }
-
-            return new HttpEntity(params, headers);
-        });
-    }
-
     public String getServiceName() {
         return this.serviceName;
     }
@@ -137,11 +112,8 @@ public class RestClientWrapper {
                                          int remainingAttempts,
                                          HttpHeaders headers,
                                          Function<HttpHeaders, HttpEntity<B>> function) {
-        ResponseEntity<RestResponse<T>> responseEntity = this.queryInternal(request,
-                new ParameterizedTypeReference<RestResponse<T>>() {},
-                remainingAttempts,
-                headers,
-                function);
+        ResponseEntity<RestResponse<T>> responseEntity = this.queryInternal(request, new ParameterizedTypeReference<>() {},
+                remainingAttempts, headers, function);
         if (null != responseEntity) {
             RestResponse<T> body = (RestResponse)responseEntity.getBody();
             if (body == null) {
@@ -175,30 +147,32 @@ public class RestClientWrapper {
             HttpEntity<B> httpEntity = (HttpEntity) function.apply(headers);
             ResponseEntity<T> responseEntity = this.restTemplate.exchange(url, request.getRequestMethod(), httpEntity, parameterizedTypeReference);
             return responseEntity;
-
         } catch (Exception var12) {
-            if (this.isThrowOnError()) {
-                throw var12;
-            } else {
-                if (var12 instanceof IllegalStateException || var12 instanceof ResourceAccessException) {
-                    Matcher matcher = pattern.matcher(var12.getMessage());
-                    if (matcher.find()) {
-                        String serviceNameStr = matcher.group(1);
-                        this.logger.warn("Service {} is unavailable", serviceNameStr);
-                        return new ResponseEntity(HttpStatus.SERVICE_UNAVAILABLE);
-                    }
-                }
+            return handleQueryException(url, var12);
+        }
+    }
 
-                this.logger.error("Exception calling url '" + url + "': " + var12.getMessage());
-                this.logger.debug("", var12);
-                if (var12 instanceof HttpStatusCodeException) {
-                    HttpStatusCodeException exception = (HttpStatusCodeException)var12;
-                    this.logger.error("'" + url + "' return error code " + exception.getStatusCode());
-                    return new ResponseEntity(exception.getStatusCode());
-                } else {
-                    return new ResponseEntity(HttpStatus.SERVICE_UNAVAILABLE);
-                }
+    private <T> ResponseEntity<T> handleQueryException(String url, Exception var12) {
+        if (this.isThrowOnError()) {
+            throw new RuntimeException();
+        }
+        if (var12 instanceof IllegalStateException || var12 instanceof ResourceAccessException) {
+            Matcher matcher = pattern.matcher(var12.getMessage());
+            if (matcher.find()) {
+                String serviceNameStr = matcher.group(1);
+                this.logger.warn("Service {} is unavailable", serviceNameStr);
+                return new ResponseEntity(HttpStatus.SERVICE_UNAVAILABLE);
             }
+        }
+
+        this.logger.error("Exception calling url '" + url + "': " + var12.getMessage());
+        this.logger.debug("", var12);
+        if (var12 instanceof HttpStatusCodeException) {
+            HttpStatusCodeException exception = (HttpStatusCodeException)var12;
+            this.logger.error("'" + url + "' return error code " + exception.getStatusCode());
+            return new ResponseEntity(exception.getStatusCode());
+        } else {
+            return new ResponseEntity(HttpStatus.SERVICE_UNAVAILABLE);
         }
     }
 }
