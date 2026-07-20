@@ -3,7 +3,9 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/microservice-discovery/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microservice-discovery/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microservice-project/client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microservice-project/messaging/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microservice-project/server-discovery/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microservice-project/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microservice-project/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-cloud-framework/gateway/src/main/java" charset="UTF-8" />
