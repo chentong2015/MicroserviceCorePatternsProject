@@ -5,49 +5,10 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-cloud-eureka/pom.xml" />
-        <option value="$PROJECT_DIR$/microservice-order-ribbon/pom.xml" />
-        <option value="$PROJECT_DIR$/microservice-user-provider/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-cloud-projects/service-discovery/netflix-eureka/microservice-order-ribbon/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-cloud-projects/service-discovery/netflix-eureka/microservice-user-client/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-cloud-projects/spring-cloud-gateway/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-cloud-gateway/pom.xml" />
-        <option value="$PROJECT_DIR$/microservice-discovery/netflix-eureka/microservice-user-client/pom.xml" />
-        <option value="$PROJECT_DIR$/microservice-discovery/netflix-eureka/microservice-order-ribbon/pom.xml" />
-        <option value="$PROJECT_DIR$/microservice-discovery/netflix-eureka/euroka-client-user/pom.xml" />
-        <option value="$PROJECT_DIR$/microservice-discovery/netflix-eureka/netflix-eureka-server/pom.xml" />
-        <option value="$PROJECT_DIR$/microservice-discovery/netflix-eureka/euroka-client-order/pom.xml" />
-        <option value="$PROJECT_DIR$/microservice-discovery/zuul-eureka/eureka-client/pom.xml" />
-        <option value="$PROJECT_DIR$/microservice-discovery/zuul-eureka/eureka-server/pom.xml" />
-        <option value="$PROJECT_DIR$/microservice-discovery/netflix-eureka/eureka-server/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-cloud-frameworks/spring-cloud-gateway/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-cloud-frameworks/route-gateway/pom.xml" />
-        <option value="$PROJECT_DIR$/microservice-discovery/eureka-client-order/pom.xml" />
-        <option value="$PROJECT_DIR$/microservice-discovery/eureka-client-user/pom.xml" />
-        <option value="$PROJECT_DIR$/microservice-discovery/eureka-server/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-cloud-framework/route-gateway/pom.xml" />
-        <option value="$PROJECT_DIR$/microservice-project/discovery/pom.xml" />
-        <option value="$PROJECT_DIR$/microservice-project/resource-manager/pom.xml" />
-        <option value="$PROJECT_DIR$/microservice-project/server-discovery/pom.xml" />
-        <option value="$PROJECT_DIR$/microservice-project/client-manager/pom.xml" />
-        <option value="$PROJECT_DIR$/microservice-project/client/pom.xml" />
         <option value="$PROJECT_DIR$/spring-cloud-framework/gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-framework/gateway-router/pom.xml" />
       </list>
     </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/microservice-core/pom.xml" />
-        <option value="$PROJECT_DIR$/microservice-discovery/netflix-eureka/pom.xml" />
-        <option value="$PROJECT_DIR$/microservice-discovery/zuul-eureka/pom.xml" />
-        <option value="$PROJECT_DIR$/microservice-nacos/pom.xml" />
-        <option value="$PROJECT_DIR$/microservice-project/common-framework/pom.xml" />
-        <option value="$PROJECT_DIR$/microservice-register-discovery/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-cloud-config-server/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-cloud-projects/pom.xml" />
-      </set>
-    </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="17" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/out" />
-  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK" />
 </project>
