@@ -14,6 +14,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.web.reactive.function.client.ExchangeFilterFunctions.basicAuthentication;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@SuppressWarnings("unchecked")
 public class SpringCloudGatewayAppTest {
 
     @LocalServerPort
@@ -26,7 +27,6 @@ public class SpringCloudGatewayAppTest {
     }
 
     @Test
-    @SuppressWarnings("unchecked")
     public void pathRouteWorks() {
         client.get().uri("/get")
                 .exchange()
@@ -38,7 +38,6 @@ public class SpringCloudGatewayAppTest {
     }
 
     @Test
-    @SuppressWarnings("unchecked")
     public void hostRouteWorks() {
         client.get().uri("/headers")
                 .header("Host", "www.myhost.org")
@@ -51,7 +50,6 @@ public class SpringCloudGatewayAppTest {
     }
 
     @Test
-    @SuppressWarnings("unchecked")
     public void rewriteRouteWorks() {
         client.get().uri("/foo/get")
                 .header("Host", "www.rewrite.org")
@@ -64,7 +62,6 @@ public class SpringCloudGatewayAppTest {
     }
 
     @Test
-    @SuppressWarnings("unchecked")
     public void circuitBreakerRouteWorks() {
         client.get().uri("/delay/3")
                 .header("Host", "www.circuitbreaker.org")
@@ -73,7 +70,6 @@ public class SpringCloudGatewayAppTest {
     }
 
     @Test
-    @SuppressWarnings("unchecked")
     public void circuitBreakerFallbackRouteWorks() {
         client.get().uri("/delay/3")
                 .header("Host", "www.circuitbreakerfallback.org")
@@ -87,6 +83,7 @@ public class SpringCloudGatewayAppTest {
         WebTestClient authClient = client.mutate()
                 .filter(basicAuthentication("user", "password"))
                 .build();
+
         boolean wasLimited = false;
         for (int i = 0; i < 20; i++) {
             FluxExchangeResult<Map> result = authClient.get()
@@ -100,8 +97,7 @@ public class SpringCloudGatewayAppTest {
                 break;
             }
         }
-        assertThat(wasLimited)
-                .as("A HTTP 429 TOO_MANY_REQUESTS was not received")
-                .isTrue();
+
+        assertThat(wasLimited).as("A HTTP 429 TOO_MANY_REQUESTS was not received").isTrue();
     }
 }

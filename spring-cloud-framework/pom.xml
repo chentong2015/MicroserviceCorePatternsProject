@@ -19,6 +19,6 @@
     </properties>
 
     <modules>
-        <module>openfeign-call</module>
+        <module>openfeign</module>
     </modules>
 </project>
