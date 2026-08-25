@@ -1,4 +1,4 @@
-微服务的五种部署方式 https://semaphoreci.com/blog/deploy-microservices
+微服务的五种部署方式
 1. Single machine, multiple processes:
    Buy or rent a server and run the microservices as processes.
 
@@ -18,8 +18,9 @@
    Serverless allows us to forget about processes, containers, and servers,
    and run code directly in the cloud.
 
+https://semaphoreci.com/blog/deploy-microservices
 
-关于微服务的部署技术:
+微服务自动化技术:
 1. 自动化部署         Nexus + jenkins + git + gitLab + docker
 2. 自动化测试和质量管理 Nexus + jenkins + git + gitLab + docker + SonarQube
 3. 监控告警           SpringBoot + Prometheus + Grafana + alertManager + docker

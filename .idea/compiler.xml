@@ -7,19 +7,27 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="openfeign" />
+        <module name="eureka-client-user" />
         <module name="client" />
+        <module name="eureka-client-order" />
         <module name="server-discovery" />
+        <module name="eureka-server" />
         <module name="gateway" />
         <module name="messaging" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="gateway-router" target="17" />
+      <module name="openfeign-call" target="17" />
+      <module name="route-gateway" target="15" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="client" options="-parameters" />
+      <module name="eureka-client-order" options="-parameters" />
+      <module name="eureka-client-user" options="-parameters" />
+      <module name="eureka-server" options="-parameters" />
       <module name="gateway" options="-parameters" />
       <module name="gateway-router" options="-parameters" />
       <module name="messaging" options="-parameters" />

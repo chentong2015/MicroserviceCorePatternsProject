@@ -1,0 +1,10 @@
+TODO. Service Registry & Service Discovery
+服务注册和发现应用于Microservice的通讯，使得微服务之间相互协作
+- 部署服务实例之间相互独立，不需要Network沟通，不需要服务发现
+- 部署相同的服务实例，则每个服务间没有依赖关系，不需要服务发现
+
+TODO. 常见微服务通讯方式
+- REST API Endpoints
+- Event Streaming
+- Message Broker
+- gPRC
